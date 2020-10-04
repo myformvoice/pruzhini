@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Мир пружин - тестовая форма</title>
+	<meta name="description" content="">
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="format-detection" content="telephone=no" />
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/media.css">
+
+</head>
+
+<body>
+	<header>
+		<div class="container">
+			<div class="s-header">
+				<a href="/">LOGO</a>
+				<a href="#" class="b-header__login">Log In</a>
+			</div>
+		</div>
+	</header>
+
+	<main>
+		<div class="container">
+			<div class="s-form__contetn">
+				<nav>
+					<ul class="breadcrumb">
+						<li>
+							<a href="#">
+								Калькулятор
+							</a>
+						</li>
+						<li>
+							<p>
+								Расчёт пружин растяжения
+							</p>
+						</li>
+					</ul>
+				</nav>
+				<h1>Расчёт пружин растяжения</h1>
+				<div class="b-form__wrapper">
+					<div class="b-form__settings">
+						<div class="b-form__control">
+							<label for="item_quantity">Количество пружин в партии, шт<span class="required">*</span></label>
+							<input type="text" class="form-control " id="item_quantity" name="item_quantity" placeholder="Введите значение"
+								value="">
+						</div>
+						<div class="b-form__control">
+							<label for="item_direction">Направление навивки</label>
+							<select name="item_direction" id="item_direction" class="form-control big" size="1">
+								<option value="1" selected="">Любое</option>
+								<option value="2">Правое</option>
+								<option value="3">Левое</option>
+							</select>
+							<div class="b-form__description_img--wrapper">
+								<div class="b-form__description_img active" data-value="1">
+									<img src="img/left.jpg" alt="">
+								</div>
+								<div class="b-form__description_img" data-value="2">
+									<img src="img/right.jpg" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="b-form__control">
+							<label for="item_quantity">Размерность силовой характеристики</label>
+							<select name="item_quantity" id="item_quantity" class="form-control big">
+								<option value="1">Расчет усилий в Н</option>
+								<option value="2" selected="">Расчет усилий в кг</option>
+							</select>
+						</div>
+						<div class="b-form__control">
+							<label for="item_strength">Представление силовой характеристики</label>
+							<select name="item_strength" id="item_strength" class="form-control big ">
+								<option value="1" selected="">Длина пружины – усилие</option>
+								<option value="2">Ход сжатия пружины – усилие</option>
+							</select>
+						</div>
+						<div class="b-form__control">
+							<label for="item_material">Материал</label>
+							<select name="item_material" id="item_material" class="form-control big">
+								<option value="8" selected="">Стандартная пружинная сталь</option>
+								<option value="1">Проволока по ГОСТ 9389</option>
+								<option value="2">Проволока 12Х18Н10Т</option>
+								<option value="3">60С2А, 51ХФА</option>
+								<option value="4">Бронза БркМЦ3-1</option>
+								<option value="11">ХН77ТЮР (ЭИ437Б)</option>
+								<option value="10">Титановый сплав ВТ16, ТС6</option>
+								<option value="5">Проволока по ЕN 10270-1</option>
+								<option value="6">Проволока по ЕN 10270-2</option>
+								<option value="7">Проволока по ЕN 10270-3</option>
+								<option value="9">Нестандартный материал</option>
+							</select>
+						</div>
+						<div class="b-form__control">
+							<label for="item_reference">Формирование опорных витков</label>
+							<select name="item_reference" id="item_reference" class="form-control big" size="1">
+								<option value="1" class="">Поджатые, шлифованные</option>
+								<option value="2">Поджатые, нешлифованные</option>
+								<option value="3">Неподжатые, нешлифованные</option>
+							</select>
+						</div>
+						<div class="b-form__control">
+							<label for="item_reference">Диаметр проволоки (прутка) <span class="scp-var">d</span><span class="required">*</span>, мм</label>
+							<select name="item_reference" id="item_reference" class="form-control big" size="1">
+								<option value="1" class="">Поджатые, шлифованные</option>
+								<option value="2">Поджатые, нешлифованные</option>
+								<option value="3">Неподжатые, нешлифованные</option>
+							</select>
+						</div>
+						<div class="b-form__control">
+							<label for="item_diameter">Диаметр, мм<span class="required">*</span></label>
+							<div class="d-flex">
+								<select style="width:90px;" name="item_diameter" id="item_diameter" class="form-control big ">
+									<option value="1">Dнар</option>
+									<option value="2">Dвн</option>
+								</select>
+								<input type="text" class="form-control " id="item_diameter_inner" name="item_diameter_inner" data-id="Dnar"
+									placeholder="Введите данные" value="">
+							</div>
+						</div>
+						<div class="b-form__control">
+							<label for="item_length">Длина пружины без нагрузки <span class="scp-var">l</span><span class="scp-var-desc">0</span>, мм<span class="required">*</span></label>
+							<input type="text" class="form-control " id="item_length" name="item_length" data-id="item_length" placeholder="Введите значение" value="">
+						</div>
+						<div class="b-form__control">
+							<label for="item_number_turns">Рабочее число витков <span class="scp-var">n</span><span class="required">*</span></label>
+							<input type="text" class="form-control " id="item_number_turns" name="item_number_turns" placeholder="Введите значение" value="">
+						</div>
+					</div>
+					<div class="b-form__presentation">
+						<div class="b-form__img">
+							<img src="img/test.jpg" alt="ТЕСТ">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<footer>
+	</footer>
+
+	<script src="libs/jquery/jquery-3.3.1.min.js"></script>
+	<script src="libs/maskedinput/jquery.maskedinput.min.js"></script>
+	<script src="js/common.js"></script>
+
+</body>
+
+</html>
